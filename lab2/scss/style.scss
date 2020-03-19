@@ -77,38 +77,44 @@ body{
 }
 
 $padLeft: 25%;
+
 $padRight: 25%;
+
+$borderMaxWidth: 940px;
+
+$black: black;
+
 .border{
 
     padding-left: $padLeft;
     padding-right: $padRight;
-    max-width: 940px;
+    max-width: $borderMaxWidth;
 
     margin: 0;
 
 }
-.someNav{
+.someNav{ 
     display: flex;
     justify-content:flex-end;
     align-items:center;
 
     font-size: 17px;
-    background-color: black;  
+    background-color: $black;  
     padding-left: $padLeft;
     padding-right: $padRight;
+    a{
+        color: aliceblue;
+        text-decoration: none;
+        margin-left: 2%;
+        font-family: 'PTSansRegular';
+    }
+    img{
+        width: 20px;
+        height: 60%;
+        padding-right: 2px;
+    }
 }
-.someNav a{
-    color: aliceblue;
-    text-decoration: none;
-    margin-left: 2%;
-    font-family: 'PTSansRegular';
-}
-.someNav img{
-    width: 20px;
-    height: 60%;
-    padding-right: 2px;
-    /* margin-right: 2%; */
-}
+
 .conteiner-1{
     padding-top: 5px;
     display: flex;
@@ -117,25 +123,18 @@ $padRight: 25%;
     flex-wrap: wrap;
     flex-direction:row;
     justify-content:space-between;
-    /* height: 5 5px; */
-    /* background-color: black; */
-}
-.conteiner-1 img{
-    display: flex;
-    
-}
-.conteiner-1 a{
-    margin-right: 8px;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
-}
-.conteiner-1 img{
-    display: flex;
-   width: 24px;
-   height: 22px;;
-   flex-wrap: wrap;
-
+    img{
+        display: flex;
+        width: 24px;
+        height: 22px;;
+        flex-wrap: wrap;
+    }
+    a{
+        margin-right: 8px;
+        text-decoration: none;
+        color: $black;
+        font-size: 14px;
+    }
 }
 .box-1{
     display:flex;
@@ -143,25 +142,26 @@ $padRight: 25%;
     flex-wrap: wrap;
     max-width: 80%;
     font-family:"PTSansRegular";
+    a{
+        font-size: 15px;
+        margin-left: 20px;
+    }
     
-}
-.box-1 a{
-    font-size: 15px;
-    margin-left: 20px;
 }
 
 .box-2 {
     display: flex;
+    img{
+        padding-left: 30%;
+    }
 }
-.box-2 img{
-    padding-left: 30%;
-}
+
 .hr{
     padding-top: 4px;
     margin-bottom: 30px;
 }
 hr{
-    border: 1px solid black;
+    border: 1px solid $black;
     border-radius: 25px;
 }
 
@@ -196,12 +196,6 @@ hr{
     max-height: 250px;
     max-height: 100%;
 }
-/* leftBoxTopLeft img{
-    
-    height: 100%;
-    width: 60%;
-} */
-
 
 .leftBoxTopRight{
     background-color: #F2F2F2;
@@ -209,37 +203,38 @@ hr{
     flex:2;
     width: 35%;
     flex-direction: column;
-    text-overflow:ellipsis
-    
-}
-.leftBoxTopRight p{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
-    
-}
-.leftBoxTopRight h3{
-    font-family:"PTSerifRegular";
-    color: #c80000;
-    font-size: 30px;
-    margin-bottom: 30px;
-    margin-top: 15px;
-    margin-left: 15px;
-    overflow: hidden;
     text-overflow:ellipsis;
+    p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    h3{
+        font-family:"PTSerifRegular";
+        color: #c80000;
+        font-size: 30px;
+        margin-bottom: 30px;
+        margin-top: 15px;
+        margin-left: 15px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
+    
 }
+
+
 .leftBoxTopRightBot{
     margin-left: 15px;
     overflow: hidden;
     text-overflow:ellipsis;
     max-height: 110px;
     font-family: 'PTSansRegular';   
-}
-.leftBoxTopRightBot p{
+    p{
     
-    overflow: hidden;
-    text-overflow:ellipsis;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
 }
+
 .left-boxHr{
     height: 4px;
     background-color: #c70000;
@@ -259,7 +254,7 @@ hr{
     align-self:center;
     flex: 2;
     height: 2px;
-    background-color: black;
+    background-color: $black;
     width: 100%;
 }
 .right-box2{
@@ -280,7 +275,7 @@ hr{
     align-self:center;
     flex: 2;
     height: 2px;
-    background-color: black;
+    background-color: $black;
     max-width: 100%;
 }
 .right-boxCenter, .right-boxCenterBox-1 , .right-boxCenterBox-1 , .right-boxCenterBox-2, .right-boxCenterBox-3, .right-boxCenterBox-4, .right-boxCenterBox-5 {
@@ -291,6 +286,10 @@ hr{
     height: 500px;
     flex-direction: column;
     margin-top: 10px;
+    img{
+        max-width: 100%;
+        /* max-height: 90px; */
+    }
     /* margin-bottom: 20px; */
 
 }
@@ -312,22 +311,19 @@ hr{
     max-height: 88px;
     overflow: hidden;
 }
-.right-boxCenter img{
-    max-width: 100%;
-    /* max-height: 90px; */
-}
-.right-boxBot p{
-    margin-top: 10px;
-    font-size: 20px;
-    color: #3d76cc;
-    font-family:"PTSansRegular";
-   
-}
-.right-boxBot hr{
-    margin-top: 5px;
-    height: 3px;
-    background-color: black;
-    border-radius: 0px;
+.right-boxBot{
+    p{
+        margin-top: 10px;
+        font-size: 20px;
+        color: #3d76cc;
+        font-family:"PTSansRegular";
+    }
+    hr{
+        margin-top: 5px;
+        height: 3px;
+        background-color: $black;
+        border-radius: 0px;
+    }
 }
 .rightBoxBot{
     display: flex;
@@ -340,7 +336,7 @@ hr{
 }
 .rightBoxBotbox-1box-1{
     display: flex;
-    /* border: solid black 1px; */
+    /* border: solid $black 1px; */
     white-space: nowrap;
     font-size: 20px;
     align-content: flex-end;
@@ -350,10 +346,10 @@ hr{
 }
 .rightBoxBotbox-1box-2{
     display: flex;
-    border: solid black 1px;
+    border: solid $black 1px;
     max-width: 100%;
     height: 1px;
-    background-color: black;
+    background-color: $black;
     align-self: flex-end;
     width: 100%;
     margin-bottom: 5px;
@@ -364,12 +360,12 @@ hr{
     margin-top: 10px;
     height: 280px;
     font-family: 'Courier New', Courier, monospace;
+    p{
+        font-family: "PTSansRegular";
+        font-size: 11pt;
+    }
     
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif */
-}
-.rightBoxBotbox-2 p{
-    font-family: "PTSansRegular";
-    font-size: 11pt;
 }
 .rightBoxBotbox-2box-1 {
     display: flex;
@@ -412,14 +408,14 @@ hr{
 }
 .bottomBlockbox-12{
     height: 2px;
-    background-color: black;
+    background-color: $black;
     width: 100%;
     align-self: flex-end;
     margin-bottom: 4px;
 }
 .bottomBlockbox-2{
     display: flex;
-    color: black;
+    color: $black;
     font-family: "PTSansRegular";
     flex-direction: row;
     margin-top: 15px;
@@ -496,25 +492,19 @@ hr{
 .bottomBlockbox-2box-1{
     height: 90px;;
        /* height: 100%; */
-}
-.bottomBlockbox-2box-1 img{
-    margin-left:15px;
-    margin-right: 25px;
-    margin-bottom: 25px;
-    margin-top:40px;
-    max-width: 100%;
-    min-width: 10px;
-    /* margin-left:52.5%;
-    margin-right: 45.5%;
-    margin-bottom: 50%;
-    margin-top:50%;
-    height: 100%; */
-
+       img{
+        margin-left:15px;
+        margin-right: 25px;
+        margin-bottom: 25px;
+        margin-top:40px;
+        max-width: 100%;
+        min-width: 10px;
+    }
 }
 .hr1{
     margin-top: 25px;
     height: 2px;
-    background-color: black;
+    background-color: $black;
 }
 .footer{
     margin-top:30px;
@@ -530,7 +520,7 @@ hr{
     margin-top: 25px;
     padding-left: 25%;
     padding-right: 25%;
-    max-width: 940px;
+    max-width: $borderMaxWidth;
     font-family:"PTSansRegular";
 }
 .botP{
@@ -539,7 +529,7 @@ hr{
     margin-top:20px;
     padding-left: 25%;
     padding-right: 25%;
-    max-width: 940px;
+    max-width: $borderMaxWidth;
     font-family:"PTSansRegular";
 }
 .botP a{
@@ -553,22 +543,20 @@ hr{
     width: 25%;
     height: 15%;
     margin-right: 10px;
-}
-.leftBoxTopRightBot1 p{
-    margin-left: 8px;
-    margin-right: 8px;
-}
-.leftBoxTopRightBot1 img{
-    height: 60%;
-    width: 30%;;
+    p{
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    img{
+        height: 60%;
+        width: 30%;;
+    }
 }
 .box-111{
     position: absolute;
     margin-left: 2px;
     margin-top: 67px;
     z-index: 999;
-
-    /* margin-top:3.8%; */
 }
 .box-111 a img{
     max-width: 100%;
@@ -576,8 +564,6 @@ hr{
     width: auto\9; /* ie8 */
 }
 .play{
-    /* width: 25px; */
-    /* height: 20px; */
     height: 15px;;
     width:1.1%;
 
@@ -587,36 +573,17 @@ hr{
     margin-top: 67px;
     border: 1px solid white;
     border-radius: 5px;
-}
-.play{
     color: white;
     display: flex;
     justify-content: center;
+    p{
+        width: 20%;
+        height: 5% ;
+        font-size: 10pt;
+        margin-left: -4px;
+        margin-top: -2px;
+    }
 }
-.play p{
-    width: 20%;
-    height: 5% ;
-    font-size: 10pt;
-    margin-left: -4px;
-    margin-top: -2px;
-}
-.feedback div{ 
-    
-    // width: 2%;
-    // height: 15%;
-    // position: fixed;
-    // margin-top: 350px;
-    // float: right;
-    // text-align: right;
-    // border: 1px solid red;
-    // font-size: 100px;
-    /* display: inline-block; */
-    // text-align: start; 
-     
-    
-    
-}   
-
 
 .feedback {
     /* float: right; */
@@ -631,9 +598,9 @@ hr{
     // border: 1px solid red;
     width: 30px;
     height: 110px;
-}
-.feedback p{
-    padding-top: 5px;
+    p{
+        padding-top: 5px;
+    } 
 }
 
 
@@ -716,14 +683,14 @@ hr{
         width: 25%;
         height: 15%;
         margin-right: 10px;
-    }
-    .leftBoxTopRightBot1 p{
-        padding-top: 30px;
-    }
-    .leftBoxTopRightBot1 img{
-        height: 15px;
-        width: 15px;
-        padding-top: 30px;
+        p{
+            padding-top: 30px;
+        }
+        img{
+            height: 15px;
+            width: 15px;
+            padding-top: 30px;
+        }
     }
     .rightBoxBotbox-1box-1 {
         font-size: 30px;
@@ -784,10 +751,10 @@ hr{
         width: 55px;
         margin-top: 145px;
         margin-left: 15px;
-    }
-    .play p{
-        font-size: 30px;
-        margin-left: -10px;
+        p{
+            font-size: 30px;
+            margin-left: -10px;
+        }
     }
     .topP{
         margin-top: 25px;
@@ -814,24 +781,21 @@ hr{
         margin-left: 15px;
         width: 30px;
         height: 200px;;
-        
-    }
-    .bottomBlockbox-2box-1{
-        /* margin-right: 30px; */
         margin-right: 2%;
+        img{
+            height: 200px;;
+            width: 50px;
+        }
         
     }
-    .bottomBlockbox-2box-1 img{
-        height: 200px;;
-        width: 50px;
-    }
+    
     .bottomBlockbox-2box-7 {
         margin-left: 2%;
         margin-right: 100px;
-    }
-    .bottomBlockbox-2box-7 img{
-        width: 17%;
-        height: 200px;
+        img{
+            width: 17%;
+            height: 200px;
+        }
     }
     .firstImg img{
         height: 150px;;
@@ -863,4 +827,4 @@ hr{
     }
     
     
-}
+} 
